@@ -21,7 +21,7 @@
 <meta property="og:image" content="https://i.loli.net/2020/03/03/rQav2R8NBlmgdxH.png">
 <meta property="og:image" content="https://i.loli.net/2020/03/12/C5wq8RLUnKB9z2W.png">
 <meta property="article:published_time" content="2020-03-14T05:20:35.000Z">
-<meta property="article:modified_time" content="2020-03-14T05:33:37.615Z">
+<meta property="article:modified_time" content="2020-03-14T08:31:00.898Z">
 <meta property="article:author" content="Eric G. Perry">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://i.loli.net/2020/02/25/wPUFpc8sQkuD6dM.png">
@@ -143,13 +143,13 @@
 </li>
 <li>常见的虚拟机软件(VMware VirtualPC)能不能理解为操作系统？<ul>
 <li><strong>不能。</strong>  </li>
-<li>虚拟机软件只是为操作系统提供了一个可以安装的地方，其本质应该也是属于普通计算机的范畴，其所有的硬件设置都是虚拟出来的，拥有其对应的参数。如需正常使用仍需额外安装操作系统。  <h3 id="二-操作系统功能和定义"><a href="#二-操作系统功能和定义" class="headerlink" title="(二). 操作系统功能和定义"></a>(二). 操作系统功能和定义</h3></li>
+<li>虚拟机软件只是为操作系统提供了一个可以安装的地方，其本质应该也是属于普通计算机的范畴，其所有的硬件设置都是虚拟出来的，拥有其对应的参数。如需正常使用仍需额外安装操作系统。</li>
 </ul>
 </li>
 </ol>
 </li>
 </ol>
-<ul>
+<h3 id="二-操作系统功能和定义"><a href="#二-操作系统功能和定义" class="headerlink" title="(二)操作系统功能和定义"></a>(二)操作系统功能和定义</h3><ul>
 <li>功能:  <ol>
 <li>/*进程管理（CPU管理）：<br> 多个程序运行时，Windows环境下有多个进程在并发运行-&gt;共享CPU    <ol>
 <li>进程控制：创建，暂停，唤醒，撤销；  </li>
@@ -221,11 +221,14 @@
 </li>
 <li>如何理解操作系统两大功能：扩展的虚拟机和资源管理？<ul>
 <li>扩展的虚拟机：</li>
-<li>资源管理：资源管理应包含多个方面，包括进程<del>，内存</del>，文件<del>,设备</del>等，帮助使用者更好的控制计算机，并且为应用程序的并发运行提供一定的保障<br>###（三）操作系统发展历史  </li>
+<li>资源管理：资源管理应包含多个方面，包括进程<del>，内存</del>，文件<del>,设备</del>等，帮助使用者更好的控制计算机，并且为应用程序的并发运行提供一定的保障  </li>
 </ul>
 </li>
 </ul>
 </li>
+</ul>
+<p>###（三）操作系统发展历史  </p>
+<ul>
 <li><font color = "#dd0000">发展两大动力：用户需求提升&amp;硬件技术进步</font></li>
 <li>现代的大多数应用都需要非常高效实用的硬件支持，如<em>深度学习，图像处理，大数据计算等</em></li>
 <li>计算机硬件的四个典型阶段：<ol>
@@ -293,11 +296,14 @@
 <li><strong>课后习题</strong><ul>
 <li>再多到批处理中尝试不断增加程序的数量，系统的而效率会不会持续增加？结果会如何？<ul>
 <li><strong>不会</strong></li>
-<li>多道批处理能处理的程序数量是有峰值的，未到峰值之前数量越多越好，超过峰值之后由于其本质还是在CPU上串行处理便有可能导致部分程序无法准时利用CPU而降低实用效率<br>###（四）分时技术&amp;分时操作系统</li>
+<li>多道批处理能处理的程序数量是有峰值的，未到峰值之前数量越多越好，超过峰值之后由于其本质还是在CPU上串行处理便有可能导致部分程序无法准时利用CPU而降低实用效率  </li>
 </ul>
 </li>
 </ul>
 </li>
+</ul>
+<p>###（四）分时技术&amp;分时操作系统</p>
+<ul>
 <li>60s硬件的重大进展：  <ul>
 <li>中断技术：<ul>
 <li>CPU收到外来中断信号后，停止当前工作，转而处理中断信号发出事件，处理完后回到中断点继续原有工作；</li>
@@ -346,9 +352,12 @@
 </li>
 <li><strong>分时技术的时间片设置太大或太小，应该根据哪些因素来考虑？是尽量大好还是尽量小好？</strong><ul>
 <li>根据需要使用到CPU的所有终端的数目来考虑，同时还需要考虑到硬件的性能支持</li>
-<li>其大小应该研究该项操作系统所可能使用的程序/进程后，选出一个合适的区间，避免过大而无法计时交互，过小又无法充分发挥CPU性能的问题。<br>###（五）典型操作系统类型</li>
+<li>其大小应该研究该项操作系统所可能使用的程序/进程后，选出一个合适的区间，避免过大而无法计时交互，过小又无法充分发挥CPU性能的问题。  </li>
 </ul>
 </li>
+</ul>
+<p>###（五）典型操作系统类型</p>
+<ul>
 <li>操作系统的进一步发展（分时系统的演化)  <ol>
 <li>微机操作系统：<ul>
 <li>背景：大规模集电的发展-&gt;个人计算机时代</li>
@@ -438,11 +447,11 @@
 </ol>
 </li>
 <li><strong>你认为国产操作系统能否成功？影响成功的因素有哪些？</strong><ul>
-<li>在某些特定情况下的国产操作系统是能成功的，如军事管理方，这样的小众且与国家密切相关的地方实行国产操作系统也能够根据我国状况进行适应性的调整，随着硬件的不断提升，一定能成功。但是对于广大普通民众，国产操作系统的接受率应该会非常低，因为现在市面上流行的操作系统已经发展很多年，各方各面都很完善，大众也已经习惯了这样的操作系统，如果国产不能够优于这些流行操作系统过多的话，鲜有人会放弃熟悉的去使用。由于产品垄断的原因，导致国产开发出优于市面流行系统更为艰难，所以民众化的普及是很难成功的。  <h3 id="章节测试"><a href="#章节测试" class="headerlink" title="章节测试"></a>章节测试</h3><h4 id="问答"><a href="#问答" class="headerlink" title="问答"></a>问答</h4></li>
+<li>在某些特定情况下的国产操作系统是能成功的，如军事管理方，这样的小众且与国家密切相关的地方实行国产操作系统也能够根据我国状况进行适应性的调整，随着硬件的不断提升，一定能成功。但是对于广大普通民众，国产操作系统的接受率应该会非常低，因为现在市面上流行的操作系统已经发展很多年，各方各面都很完善，大众也已经习惯了这样的操作系统，如果国产不能够优于这些流行操作系统过多的话，鲜有人会放弃熟悉的去使用。由于产品垄断的原因，导致国产开发出优于市面流行系统更为艰难，所以民众化的普及是很难成功的。  </li>
 </ul>
 </li>
 </ul>
-<ol>
+<h3 id="章节测试"><a href="#章节测试" class="headerlink" title="章节测试"></a>章节测试</h3><h4 id="问答"><a href="#问答" class="headerlink" title="问答"></a>问答</h4><ol>
 <li>站在普通用户的角度，总结操作系统有哪些基本功能？<ol>
 <li>提供图形化界面方便操作</li>
 <li>提供应用程序的控制，使普通用户可以更好的使用各类程序而不用了解其内部构造</li>
@@ -511,11 +520,13 @@
 </li>
 <li>设备管理<ol>
 <li>外部设备与应用程序的接口</li>
-<li>设备的分配/调度  <h4 id="开放性思考"><a href="#开放性思考" class="headerlink" title="开放性思考"></a>开放性思考</h4></li>
+<li>设备的分配/调度  </li>
 </ol>
 </li>
 </ol>
 </li>
+</ol>
+<h4 id="开放性思考"><a href="#开放性思考" class="headerlink" title="开放性思考"></a>开放性思考</h4><ol>
 <li>尽可能思考没有安装操作系统的计算机启动过程和结果？</li>
 <li>常见的虚拟机软件（例如VMware，VirtualPC等）能不能理解为操作系统？</li>
 <li>思考运行应用程序（例如记事本程序）需要操作系统提供哪些支持？</li>
@@ -592,9 +603,11 @@
 </ol>
 </li>
 <li>OS的微内核结构的优点，对设计程序有什么启示？  <ul>
-<li><h3 id="二-CPU的态"><a href="#二-CPU的态" class="headerlink" title="(二)CPU的态"></a>(二)CPU的态</h3></li>
+<li></li>
 </ul>
 </li>
+</ul>
+<h3 id="二-CPU的态"><a href="#二-CPU的态" class="headerlink" title="(二)CPU的态"></a>(二)CPU的态</h3><ul>
 <li>OS的最基本硬件：CPU<ul>
 <li>CPU:<ul>
 <li>CPU态(Mode)<ol>
@@ -678,7 +691,7 @@
 <li>CPU读取指令|数据的访问顺序<ol>
 <li>缓存(命中)</li>
 <li>内存(没有命中)</li>
-<li>辅存(<strong>缺页</strong>)  <h3 id="三-中断机制"><a href="#三-中断机制" class="headerlink" title="(三)中断机制"></a>(三)中断机制</h3></li>
+<li>辅存(<strong>缺页</strong>)  </li>
 </ol>
 </li>
 </ul>
@@ -690,7 +703,7 @@
 </ul>
 </li>
 </ul>
-<ol>
+<h3 id="三-中断机制"><a href="#三-中断机制" class="headerlink" title="(三)中断机制"></a>(三)中断机制</h3><ol>
 <li>定义：<ul>
 <li>CPU对突发的外部事件的反应过程|机制</li>
 <li><center>![image.png](https://i.loli.net/2020/02/27/s5UmZWeVGkp9KPF.png)</center></li>
@@ -745,11 +758,13 @@
 + 交换CPU的态
 + 工作：
         + 现场的保护和恢复
-        + 参数传递(通信)  </code></pre><h2 id="第二章章末"><a href="#第二章章末" class="headerlink" title="第二章章末"></a><strong>第二章章末</strong></h2></li>
+        + 参数传递(通信)  </code></pre></li>
 </ul>
 </li>
 </ul>
 </li>
+</ol>
+<h2 id="第二章章末"><a href="#第二章章末" class="headerlink" title="第二章章末"></a><strong>第二章章末</strong></h2><ol>
 <li>操作系统微内核架构有何作用？在应用编程中，我们如何使用“客户-服务器”的编程思想提升程序的功能可扩展性？<ol>
 <li>提高系统的可扩展性和可移植性</li>
 <li>增强了系统的可靠性</li>
@@ -762,11 +777,11 @@
 <li>网上搜索“Intel CPU的保护模式”，“特权级”两个关键词，了解“CPU的态”与“保护模式”、“特权级”等概念。<ol>
 <li>CPU的态主要是为了区分不同的使用”用户”以保证其操作不会对OS本身造成损害</li>
 <li>保护模式采用了更为广阔的内存映射方式，扩大了实模式下能使用的内存上限。同时保护模式还提供了不同程序(任务)之间的分割，让每一个程序能自己运行而不收到其他程序的影响。同一个程序(任务)里也根据调用的指令的权限不同而进行隔离，避免指令的跨级误用</li>
-<li>特权级就像是为根据指令执行时需要调用的系统资源的多少和深度来划分级别，以此来保证低级别的指令不会因为一些错误原因访问到高级指令所在地址区域从而跨级修改系统的数据。就像绕过了上面所说保护模式中为各个程序(任务)提供的保护屏障而导致OS出现预料之外的故障  <h2 id="三操作系统用户界面"><a href="#三操作系统用户界面" class="headerlink" title="三操作系统用户界面"></a>三操作系统用户界面</h2></li>
+<li>特权级就像是为根据指令执行时需要调用的系统资源的多少和深度来划分级别，以此来保证低级别的指令不会因为一些错误原因访问到高级指令所在地址区域从而跨级修改系统的数据。就像绕过了上面所说保护模式中为各个程序(任务)提供的保护屏障而导致OS出现预料之外的故障  </li>
 </ol>
 </li>
 </ol>
-<hr>
+<h2 id="三操作系统用户界面"><a href="#三操作系统用户界面" class="headerlink" title="三操作系统用户界面"></a>三操作系统用户界面</h2><hr>
 <h3 id="一-操作系统启动过程"><a href="#一-操作系统启动过程" class="headerlink" title="(一)操作系统启动过程"></a>(一)操作系统启动过程</h3><h4 id="1-Bios和主引导记录MBR"><a href="#1-Bios和主引导记录MBR" class="headerlink" title="1. Bios和主引导记录MBR"></a>1. Bios和主引导记录MBR</h4><ol>
 <li>实模式和保护模式<ul>
 <li>实模式：<ul>
@@ -832,9 +847,11 @@
 <li>BIOS和MBR程序运行过程<ol>
 <li>POST -&gt;CMOS设置(硬盘启动)-&gt;读取MBR-&gt;控制权给MBR</li>
 <li>MBR加载第一分区PBR并加载</li>
-<li>PBR继续控制后续过程    <h3 id="三-OS用户界面"><a href="#三-OS用户界面" class="headerlink" title="(三)OS用户界面"></a>(三)OS用户界面</h3><h4 id="1-OS用户界面概念"><a href="#1-OS用户界面概念" class="headerlink" title="1.OS用户界面概念"></a>1.OS用户界面概念</h4></li>
+<li>PBR继续控制后续过程    </li>
 </ol>
 </li>
+</ol>
+<h3 id="三-OS用户界面"><a href="#三-OS用户界面" class="headerlink" title="(三)OS用户界面"></a>(三)OS用户界面</h3><h4 id="1-OS用户界面概念"><a href="#1-OS用户界面概念" class="headerlink" title="1.OS用户界面概念"></a>1.OS用户界面概念</h4><ol>
 <li>定义：OS提供给用户控制计算机的接口</li>
 <li>分类<ul>
 <li><strong>操作界面</strong><ol>
@@ -857,9 +874,11 @@
 </li>
 </ol>
 </li>
-<li><strong>系统调用</strong>  <h3 id="四-系统调用"><a href="#四-系统调用" class="headerlink" title="(四)系统调用"></a>(四)系统调用</h3></li>
+<li><strong>系统调用</strong>  </li>
 </ul>
 </li>
+</ol>
+<h3 id="四-系统调用"><a href="#四-系统调用" class="headerlink" title="(四)系统调用"></a>(四)系统调用</h3><ol>
 <li>定义：OS内核位程序提供的<em>底层</em>服务/函数</li>
 <li>特点：<ul>
 <li>涉及核心资源|硬件操作</li>
@@ -921,13 +940,13 @@
 </li>
 <li>对CPU的依赖性<ul>
 <li>偏CPU进程：计算型进程</li>
-<li>偏IO进程：偏重于IO的进程  <h4 id="2-进程状态"><a href="#2-进程状态" class="headerlink" title="(2)进程状态"></a>(2)进程状态</h4></li>
+<li>偏IO进程：偏重于IO的进程  </li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-<ol>
+<h4 id="2-进程状态"><a href="#2-进程状态" class="headerlink" title="(2)进程状态"></a>(2)进程状态</h4><ol>
 <li>状态的分类：<ol>
 <li>运行状态(Running):进程占有CPU在其上运行</li>
 <li>就绪状态(Ready):具备运行条件但无CPU可运行</li>
@@ -955,9 +974,11 @@
 </ol>
 </li>
 <li>僵死态：进程终止执行</li>
-<li>挂起态：进程被挂起  <h4 id="3-进程控制块PCB"><a href="#3-进程控制块PCB" class="headerlink" title="(3)进程控制块PCB"></a>(3)进程控制块PCB</br></h4></li>
+<li>挂起态：进程被挂起  </li>
 </ol>
 </li>
+</ol>
+<h4 id="3-进程控制块PCB"><a href="#3-进程控制块PCB" class="headerlink" title="(3)进程控制块PCB"></a>(3)进程控制块PCB</br></h4><ol>
 <li>定义：<ol>
 <li><strong>描述进程状态资源&amp;与相关进程关系的<font color="#dd0000">数据结构</font></strong></li>
 <li>PCB是进程的标志</li>
@@ -971,11 +992,13 @@
 <li>进程的上下文：进程运行环境-CPU环境</li>
 <li>切换过程:<ol>
 <li>进入的进程的上下文出栈进入CPU</li>
-<li>退出的进程的上下文进栈离开CPU  <h3 id="2-进程控制"><a href="#2-进程控制" class="headerlink" title="2.进程控制"></a>2.进程控制</h3><h4 id="1-基本概念："><a href="#1-基本概念：" class="headerlink" title="(1)基本概念："></a>(1)基本概念：</h4></li>
+<li>退出的进程的上下文进栈离开CPU  </li>
 </ol>
 </li>
 </ol>
 </li>
+</ol>
+<h3 id="2-进程控制"><a href="#2-进程控制" class="headerlink" title="2.进程控制"></a>2.进程控制</h3><h4 id="1-基本概念："><a href="#1-基本概念：" class="headerlink" title="(1)基本概念："></a>(1)基本概念：</h4><ol>
 <li>概念：<ul>
 <li>进程生存全期间，对其全部行为的控制</li>
 <li>四个典型的控制行为：<ol>
