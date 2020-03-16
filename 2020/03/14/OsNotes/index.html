@@ -1,102 +1,202 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh">
 <head>
-  <meta charset="utf-8">
-  
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-  
-  <title>OsNotes | Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="操作系统 系统灵魂 核心专业课 底层开发基础 一 操作系统概述(一). 初步认识: 没有操作系统依旧可以正常使用程序 只能使用刻录在计算机硬件上的bios程序 操作系统与普通软件有重大差别 例如在蓝屏界面设置计算机基本信息时 此类程序的编写与安装都需要特殊的方式      普通用户无法运行正常软件   操作系统提供的功能: 可视化操作界面；    控制普通程序运行；   控制多个程序并发运行，管理">
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Muse","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="操作系统 **系统灵魂 核心专业课 底层开发基础** 一 操作系统概述(一). 初步认识: 没有操作系统依旧可以正常使用程序 只能使用刻录在计算机硬件上的bios程序 操作系统与普通软件有重大差别 例如在蓝屏界面设置计算机基本信息时 此类程序的编写与安装都需要特殊的方式      普通用户无法运行正常软件   操作系统提供的功能: 可视化操作界面；    控制普通程序运行；   控制多个程序并发运">
 <meta property="og:type" content="article">
 <meta property="og:title" content="OsNotes">
 <meta property="og:url" content="http://yoursite.com/2020/03/14/OsNotes/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="操作系统 系统灵魂 核心专业课 底层开发基础 一 操作系统概述(一). 初步认识: 没有操作系统依旧可以正常使用程序 只能使用刻录在计算机硬件上的bios程序 操作系统与普通软件有重大差别 例如在蓝屏界面设置计算机基本信息时 此类程序的编写与安装都需要特殊的方式      普通用户无法运行正常软件   操作系统提供的功能: 可视化操作界面；    控制普通程序运行；   控制多个程序并发运行，管理">
+<meta property="og:description" content="操作系统 **系统灵魂 核心专业课 底层开发基础** 一 操作系统概述(一). 初步认识: 没有操作系统依旧可以正常使用程序 只能使用刻录在计算机硬件上的bios程序 操作系统与普通软件有重大差别 例如在蓝屏界面设置计算机基本信息时 此类程序的编写与安装都需要特殊的方式      普通用户无法运行正常软件   操作系统提供的功能: 可视化操作界面；    控制普通程序运行；   控制多个程序并发运">
 <meta property="og:locale" content="zh">
 <meta property="og:image" content="https://i.loli.net/2020/02/25/wPUFpc8sQkuD6dM.png">
 <meta property="og:image" content="https://i.loli.net/2020/02/17/2VwirYtd17KW4aj.png">
-<meta property="og:image" content="https://i.loli.net/2020/02/27/wH68ugK5M4DClEi.png">
-<meta property="og:image" content="https://i.loli.net/2020/03/03/c9Sr8PXfpDRLMK5.png">
-<meta property="og:image" content="https://i.loli.net/2020/03/03/rQav2R8NBlmgdxH.png">
-<meta property="og:image" content="https://i.loli.net/2020/03/12/C5wq8RLUnKB9z2W.png">
 <meta property="article:published_time" content="2020-03-14T05:20:35.000Z">
 <meta property="article:modified_time" content="2020-03-15T14:45:18.939Z">
 <meta property="article:author" content="Eric G. Perry">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://i.loli.net/2020/02/25/wPUFpc8sQkuD6dM.png">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  
-<link rel="stylesheet" href="/css/style.css">
 
-<meta name="generator" content="Hexo 4.2.0"></head>
+<link rel="canonical" href="http://yoursite.com/2020/03/14/OsNotes/">
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true
+  };
+</script>
+
+  <title>OsNotes | Hexo</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="تشغيل شريط التصفح">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hexo</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>الأرشيفات</a>
+
+  </li>
+  </ul>
+
+</nav>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
       
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main"><article id="post-OsNotes" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/03/14/OsNotes/" class="article-date">
-  <time datetime="2020-03-14T05:20:35.000Z" itemprop="datePublished">2020-03-14</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 class="article-title" itemprop="name">
-      OsNotes
-    </h1>
   
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/14/OsNotes/">
 
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Eric G. Perry">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          OsNotes
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">نُشر في</span>
+
+              <time title="أُنشأ: 2020-03-14 13:20:35" itemprop="dateCreated datePublished" datetime="2020-03-14T13:20:35+08:00">2020-03-14</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">عُدل في</span>
+                <time title="عُدل: 2020-03-15 22:45:18" itemprop="dateModified" datetime="2020-03-15T22:45:18+08:00">2020-03-15</time>
+              </span>
+
+          
+
+        </div>
       </header>
+
     
-    <div class="article-entry" itemprop="articleBody">
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
         <h1 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a><center>操作系统</center></h1><hr>
-<h6 id="系统灵魂-核心专业课-底层开发基础"><a href="#系统灵魂-核心专业课-底层开发基础" class="headerlink" title="系统灵魂 核心专业课 底层开发基础"></a><center><font color="#dd0000"><strong>系统灵魂 核心专业课 底层开发基础</strong></font></center></h6><hr>
+<h6 id="系统灵魂-核心专业课-底层开发基础"><a href="#系统灵魂-核心专业课-底层开发基础" class="headerlink" title="**系统灵魂 核心专业课 底层开发基础**"></a><center><font color="#dd0000">**系统灵魂 核心专业课 底层开发基础**</font></center></h6><hr>
 <h2 id="一-操作系统概述"><a href="#一-操作系统概述" class="headerlink" title="一 操作系统概述"></a>一 操作系统概述</h2><h3 id="一-初步认识"><a href="#一-初步认识" class="headerlink" title="(一). 初步认识:"></a>(一). 初步认识:</h3><ol>
 <li><strong>没有操作系统依旧可以正常使用程序</strong><ul>
 <li>只能使用刻录在计算机硬件上的bios程序</li>
@@ -223,22 +323,22 @@
 </li>
 <li>如何理解操作系统两大功能：扩展的虚拟机和资源管理？<ul>
 <li>扩展的虚拟机：</li>
-<li>资源管理：资源管理应包含多个方面，包括进程<del>，内存</del>，文件<del>,设备</del>等，帮助使用者更好的控制计算机，并且为应用程序的并发运行提供一定的保障  </li>
+<li>资源管理：资源管理应包含多个方面，包括进程~，内存~，文件~,设备~等，帮助使用者更好的控制计算机，并且为应用程序的并发运行提供一定的保障  </li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 <h3 id="三-操作系统发展历史"><a href="#三-操作系统发展历史" class="headerlink" title="(三)操作系统发展历史"></a>(三)操作系统发展历史</h3><ul>
-<li><font color = "#dd0000">发展两大动力：用户需求提升&amp;硬件技术进步</font></li>
+<li><font color = "#dd0000">发展两大动力：用户需求提升&硬件技术进步</font></li>
 <li>现代的大多数应用都需要非常高效实用的硬件支持，如<em>深度学习，图像处理，大数据计算等</em></li>
 <li>计算机硬件的四个典型阶段：<ol>
 <li>电子管时代：1946-1955；</li>
 <li>晶体管~： 1955-1965；</li>
 <li>集电~：1965-1980；</li>
-<li>大规模集电：1980-至今；  </li>
+<li>大规模集电：1980-至今；<br><strong>——速度，容量，稳定性，可靠性不断提升</strong></li>
 </ol>
-  <strong>——速度，容量，稳定性，可靠性不断提升</strong></li>
+</li>
 <li>操作系统的四个阶段：<ol>
 <li>手工操作:50s e;</li>
 <li>单道批处理:50s;</li>
@@ -331,9 +431,9 @@
 </li>
 <li>分时技术：<ol>
 <li>主机以”时间片”为单位，把CPU轮流分配给每个终端使用，直到全部作业被运行完毕；</li>
-<li>时间片极短，在终端数量不多时，每个终端都能很快重新获得CPU的使用从而得到及时的响应  </li>
+<li>时间片极短，在终端数量不多时，每个终端都能很快重新获得CPU的使用从而得到及时的响应<br><strong>等待周期 = 时间片 * 终端数量</strong></li>
 </ol>
-  <strong>等待周期 = 时间片 * 终端数量</strong></li>
+</li>
 <li>分时系统特点：<ul>
 <li><strong>多路调制性 | 独占性 | 交互性</strong></li>
 </ul>
@@ -612,7 +712,8 @@
 <li>CPU态(Mode)<ol>
 <li>CPU的工作状态</li>
 <li>对资源和指令使用权限的描述</li>
-<li>特权指令：和底层命令相关，CPU在高权限状态下才可使用<center><br><img src="https://i.loli.net/2020/02/27/wH68ugK5M4DClEi.png" alt="image.png"></center></li>
+<li>特权指令：和底层命令相关，CPU在高权限状态下才可使用<center>  
+![image.png](https://i.loli.net/2020/02/27/wH68ugK5M4DClEi.png)</center></li>
 </ol>
 </li>
 <li>态的分类：<ol>
@@ -747,17 +848,19 @@
 <li>回复：退出~后，出栈恢复</li>
 </ul>
 </li>
-<li>中断响应过程<pre><code>1. 识别中断源
-2. 保护断点和现场
-3. 装入中断服务程序的入口地址(CS:IP)
-4. 进入中断服务程序
-5. 恢复现场和断点
-6. 中断返回IRET</code></pre></li>
-<li>~实质：<pre><code>+ 交换指令执行地址
-+ 交换CPU的态
-+ 工作：
-        + 现场的保护和恢复
-        + 参数传递(通信)  </code></pre></li>
+<li>中断响应过程<pre><code>  1. 识别中断源
+  2. 保护断点和现场
+  3. 装入中断服务程序的入口地址(CS:IP)
+  4. 进入中断服务程序
+  5. 恢复现场和断点
+  6. 中断返回IRET
+</code></pre></li>
+<li>~实质：<pre><code>  + 交换指令执行地址
+  + 交换CPU的态
+  + 工作：
+          + 现场的保护和恢复
+          + 参数传递(通信)  
+</code></pre></li>
 </ul>
 </li>
 </ul>
@@ -808,8 +911,9 @@
 </li>
 <li>系统BIOS<ul>
 <li>系统启动配置：对系统的基本参数进行配置</li>
-<li>基本的设备IO服务：<pre><code>+ 使用中断的方式来进行调用，每一个IO调用都有对应的中断序列号
-+ 每一个中断序列号下又有更多的子功能序列</code></pre></li>
+<li>基本的设备IO服务：<pre><code>  + 使用中断的方式来进行调用，每一个IO调用都有对应的中断序列号
+  + 每一个中断序列号下又有更多的子功能序列
+</code></pre></li>
 <li>加电自检和自举                <ul>
 <li>自检POST <ul>
 <li>初始化基本硬件：CPU，GPU，内存。。。</li>
@@ -857,7 +961,7 @@
 <li>典型的操作界面：图形界面，命令行界面，批处理命令/程序</li>
 <li>键盘命令：控制台环境<ul>
 <li>普通命令，批处理，shell</li>
-<li>linux典型命令<center><img src="https://i.loli.net/2020/03/03/c9Sr8PXfpDRLMK5.png" alt="image.png"></center></li>
+<li>linux典型命令<center>![image.png](https://i.loli.net/2020/03/03/c9Sr8PXfpDRLMK5.png)</center></li>
 <li>批处理：普通~的集合<ul>
 <li>支持基本编程语法</li>
 </ul>
@@ -866,7 +970,7 @@
 <li>OS和User的交互界面</li>
 <li>表现为控制台控制执行命令</li>
 <li>经典类型：Bsh，Ksh,Csh,Bash</li>
-<li>Bash：<center><img src="https://i.loli.net/2020/03/03/rQav2R8NBlmgdxH.png" alt="image.png"></center></li>
+<li>Bash：<center>![image.png](https://i.loli.net/2020/03/03/rQav2R8NBlmgdxH.png)</center></li>
 </ul>
 </li>
 </ul>
@@ -977,7 +1081,7 @@
 </ol>
 </li>
 </ol>
-<h4 id="3-进程控制块PCB"><a href="#3-进程控制块PCB" class="headerlink" title="(3)进程控制块PCB"></a>(3)进程控制块PCB</br></h4><ol>
+<h4 id="3-进程控制块PCB-lt-br-gt"><a href="#3-进程控制块PCB-lt-br-gt" class="headerlink" title="(3)进程控制块PCB&lt;/br&gt;"></a>(3)进程控制块PCB&lt;/br&gt;</h4><ol>
 <li>定义：<ol>
 <li><strong>描述进程状态资源&amp;与相关进程关系的<font color="#dd0000">数据结构</font></strong></li>
 <li>PCB是进程的标志</li>
@@ -985,7 +1089,7 @@
 <li>进程 = 程序 + PCB</li>
 </ol>
 </li>
-<li>PCB基本成员：<center><img src="https://i.loli.net/2020/03/12/C5wq8RLUnKB9z2W.png" alt="image.png"></center>  </li>
+<li>PCB基本成员：<center>![image.png](https://i.loli.net/2020/03/12/C5wq8RLUnKB9z2W.png)</center>  </li>
 <li>Linux的PCB：task_struct</li>
 <li>进程的切换：<ol>
 <li>进程的上下文：进程运行环境-CPU环境</li>
@@ -1082,7 +1186,7 @@
 </ul>
 </li>
 </ol>
-<h1 id="错题集"><a href="#错题集" class="headerlink" title="错题集"></a><center><font color="#dd0000">错题集</font></center></h1><h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a><center><strong>第一章</strong></center></h2><ol>
+<h1 id="错题集"><a href="#错题集" class="headerlink" title="错题集"></a><center><font color="#dd0000">错题集</font></center></h1><h2 id="第一章"><a href="#第一章" class="headerlink" title="**第一章**"></a><center>**第一章**</center></h2><ol>
 <li>CPU复位后执行的第一条指令的20位绝对物理地址是(16进制)？<u>FFFF0H</u></li>
 <li>操作系统启动的三个步骤先后是<u>BIOS加电自检</u>，核心初始化，系统初始化。</li>
 <li>Linux系统中，系统调用功能是利用<u>80</u>号中断实现的。(16进制)</li>
@@ -1097,117 +1201,187 @@
 </li>
 </ol>
 
-      
     </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/03/14/OsNotes/" data-id="ck7t5n5c80001v0u35wkc0enj" class="article-share-link">Share</a>
-      
-      
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2020/03/15/%E8%AE%A1%E7%BB%84%E7%AC%94%E8%AE%B0/" rel="next" title="计组笔记">
+      计组笔记 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          المحتويات
+        </li>
+        <li class="sidebar-nav-overview">
+          عام
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#操作系统"><span class="nav-number">1.</span> <span class="nav-text">操作系统</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#系统灵魂-核心专业课-底层开发基础"><span class="nav-number">1.0.0.0.0.1.</span> <span class="nav-text">**系统灵魂 核心专业课 底层开发基础**</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一-操作系统概述"><span class="nav-number">1.1.</span> <span class="nav-text">一 操作系统概述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一-初步认识"><span class="nav-number">1.1.1.</span> <span class="nav-text">(一). 初步认识:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二-操作系统功能和定义"><span class="nav-number">1.1.2.</span> <span class="nav-text">(二)操作系统功能和定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三-操作系统发展历史"><span class="nav-number">1.1.3.</span> <span class="nav-text">(三)操作系统发展历史</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四-分时技术-amp-分时操作系统"><span class="nav-number">1.1.4.</span> <span class="nav-text">(四)分时技术&amp;分时操作系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#五-典型操作系统类型"><span class="nav-number">1.1.5.</span> <span class="nav-text">(五)典型操作系统类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#章节测试"><span class="nav-number">1.1.6.</span> <span class="nav-text">章节测试</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#问答"><span class="nav-number">1.1.6.1.</span> <span class="nav-text">问答</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#开放性思考"><span class="nav-number">1.1.6.2.</span> <span class="nav-text">开放性思考</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二-操作系统逻辑结构"><span class="nav-number">1.2.</span> <span class="nav-text">二 操作系统逻辑结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一-操作系统逻辑结构"><span class="nav-number">1.2.1.</span> <span class="nav-text">(一)操作系统逻辑结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二-CPU的态"><span class="nav-number">1.2.2.</span> <span class="nav-text">(二)CPU的态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三-中断机制"><span class="nav-number">1.2.3.</span> <span class="nav-text">(三)中断机制</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二章章末"><span class="nav-number">1.3.</span> <span class="nav-text">第二章章末</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三操作系统用户界面"><span class="nav-number">1.4.</span> <span class="nav-text">三操作系统用户界面</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一-操作系统启动过程"><span class="nav-number">1.4.1.</span> <span class="nav-text">(一)操作系统启动过程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-Bios和主引导记录MBR"><span class="nav-number">1.4.1.1.</span> <span class="nav-text">1. Bios和主引导记录MBR</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三-OS用户界面"><span class="nav-number">1.4.2.</span> <span class="nav-text">(三)OS用户界面</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-OS用户界面概念"><span class="nav-number">1.4.2.1.</span> <span class="nav-text">1.OS用户界面概念</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四-系统调用"><span class="nav-number">1.4.3.</span> <span class="nav-text">(四)系统调用</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第四章-进程与线程"><span class="nav-number">2.</span> <span class="nav-text">第四章-进程与线程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一-进程管理"><span class="nav-number">2.1.</span> <span class="nav-text">(一)进程管理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-进程概念"><span class="nav-number">2.1.1.</span> <span class="nav-text">1.进程概念</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-进程基本概念"><span class="nav-number">2.1.1.1.</span> <span class="nav-text">(1)进程基本概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-进程状态"><span class="nav-number">2.1.1.2.</span> <span class="nav-text">(2)进程状态</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-进程控制块PCB-lt-br-gt"><span class="nav-number">2.1.1.3.</span> <span class="nav-text">(3)进程控制块PCB&lt;&#x2F;br&gt;</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-进程控制"><span class="nav-number">2.1.2.</span> <span class="nav-text">2.进程控制</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-基本概念："><span class="nav-number">2.1.2.1.</span> <span class="nav-text">(1)基本概念：</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#错题集"><span class="nav-number">3.</span> <span class="nav-text">错题集</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#第一章"><span class="nav-number">3.1.</span> <span class="nav-text">**第一章**</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Eric G. Perry</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-name">المقالات</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Eric G. Perry</span>
+</div>
+  <div class="powered-by">تطبيق الموقع <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.2.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">الثمة – <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.7.2
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
     </footer>
   </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2020/03/15/%E8%AE%A1%E7%BB%84%E7%AC%94%E8%AE%B0/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          计组笔记
-        
-      </div>
-    </a>
-  
-  
-</nav>
 
   
-</article>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
 
-</section>
-        
-          <aside id="sidebar">
-  
-    
+<script src="/js/utils.js"></script>
 
-  
-    
+<script src="/js/motion.js"></script>
 
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li></ul>
-    </div>
-  </div>
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
 
 
   
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2020/03/15/SQLNotes/">SQLNotes</a>
-          </li>
-        
-          <li>
-            <a href="/2020/03/15/%E8%AE%A1%E7%BB%84%E7%AC%94%E8%AE%B0/">计组笔记</a>
-          </li>
-        
-          <li>
-            <a href="/2020/03/14/OsNotes/">OsNotes</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
 
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2020 Eric G. Perry<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
 
 
   
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
 
   
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
 
+  
 
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-  </div>
 </body>
 </html>
