@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -20,17 +20,17 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Muse","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="操作系统 **系统灵魂 核心专业课 底层开发基础** 一 操作系统概述(一). 初步认识: 没有操作系统依旧可以正常使用程序 只能使用刻录在计算机硬件上的bios程序 操作系统与普通软件有重大差别 例如在蓝屏界面设置计算机基本信息时 此类程序的编写与安装都需要特殊的方式      普通用户无法运行正常软件   操作系统提供的功能: 可视化操作界面；    控制普通程序运行；   控制多个程序并发运">
+  <meta name="description" content="操作系统 系统灵魂 核心专业课 底层开发基础 一 操作系统概述(一). 初步认识: 没有操作系统依旧可以正常使用程序 只能使用刻录在计算机硬件上的bios程序 操作系统与普通软件有重大差别 例如在蓝屏界面设置计算机基本信息时 此类程序的编写与安装都需要特殊的方式      普通用户无法运行正常软件   操作系统提供的功能: 可视化操作界面；    控制普通程序运行；   控制多个程序并发运行，管理">
 <meta property="og:type" content="article">
 <meta property="og:title" content="OsNotes">
 <meta property="og:url" content="http://yoursite.com/2020/03/14/OsNotes/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="操作系统 **系统灵魂 核心专业课 底层开发基础** 一 操作系统概述(一). 初步认识: 没有操作系统依旧可以正常使用程序 只能使用刻录在计算机硬件上的bios程序 操作系统与普通软件有重大差别 例如在蓝屏界面设置计算机基本信息时 此类程序的编写与安装都需要特殊的方式      普通用户无法运行正常软件   操作系统提供的功能: 可视化操作界面；    控制普通程序运行；   控制多个程序并发运">
-<meta property="og:locale" content="zh">
+<meta property="og:description" content="操作系统 系统灵魂 核心专业课 底层开发基础 一 操作系统概述(一). 初步认识: 没有操作系统依旧可以正常使用程序 只能使用刻录在计算机硬件上的bios程序 操作系统与普通软件有重大差别 例如在蓝屏界面设置计算机基本信息时 此类程序的编写与安装都需要特殊的方式      普通用户无法运行正常软件   操作系统提供的功能: 可视化操作界面；    控制普通程序运行；   控制多个程序并发运行，管理">
+<meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://i.loli.net/2020/02/25/wPUFpc8sQkuD6dM.png">
 <meta property="og:image" content="https://i.loli.net/2020/02/17/2VwirYtd17KW4aj.png">
-<meta property="article:published_time" content="2020-03-14T05:20:35.000Z">
-<meta property="article:modified_time" content="2020-03-15T14:45:18.939Z">
+<meta property="article:published_time" content="2020-03-13T16:00:00.000Z">
+<meta property="article:modified_time" content="2020-03-16T09:17:22.150Z">
 <meta property="article:author" content="Eric G. Perry">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://i.loli.net/2020/02/25/wPUFpc8sQkuD6dM.png">
@@ -87,7 +87,7 @@
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="تشغيل شريط التصفح">
+    <div class="toggle" aria-label="切换导航栏">
       <span class="toggle-line toggle-line-first"></span>
       <span class="toggle-line toggle-line-middle"></span>
       <span class="toggle-line toggle-line-last"></span>
@@ -117,12 +117,12 @@
   <ul id="menu" class="menu">
         <li class="menu-item menu-item-home">
 
-    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>الأرشيفات</a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
 
   </li>
   </ul>
@@ -150,7 +150,7 @@
       
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/14/OsNotes/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -172,16 +172,16 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              <span class="post-meta-item-text">نُشر في</span>
+              <span class="post-meta-item-text">发表于</span>
 
-              <time title="أُنشأ: 2020-03-14 13:20:35" itemprop="dateCreated datePublished" datetime="2020-03-14T13:20:35+08:00">2020-03-14</time>
+              <time title="创建时间：2020-03-14 00:00:00" itemprop="dateCreated datePublished" datetime="2020-03-14T00:00:00+08:00">2020-03-14</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                <span class="post-meta-item-text">عُدل في</span>
-                <time title="عُدل: 2020-03-15 22:45:18" itemprop="dateModified" datetime="2020-03-15T22:45:18+08:00">2020-03-15</time>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-03-16 17:17:22" itemprop="dateModified" datetime="2020-03-16T17:17:22+08:00">2020-03-16</time>
               </span>
 
           
@@ -196,7 +196,7 @@
 
       
         <h1 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a><center>操作系统</center></h1><hr>
-<h6 id="系统灵魂-核心专业课-底层开发基础"><a href="#系统灵魂-核心专业课-底层开发基础" class="headerlink" title="**系统灵魂 核心专业课 底层开发基础**"></a><center><font color="#dd0000">**系统灵魂 核心专业课 底层开发基础**</font></center></h6><hr>
+<h6 id="系统灵魂-核心专业课-底层开发基础"><a href="#系统灵魂-核心专业课-底层开发基础" class="headerlink" title="系统灵魂 核心专业课 底层开发基础"></a><center><font color="#dd0000">系统灵魂 核心专业课 底层开发基础</font></center></h6><hr>
 <h2 id="一-操作系统概述"><a href="#一-操作系统概述" class="headerlink" title="一 操作系统概述"></a>一 操作系统概述</h2><h3 id="一-初步认识"><a href="#一-初步认识" class="headerlink" title="(一). 初步认识:"></a>(一). 初步认识:</h3><ol>
 <li><strong>没有操作系统依旧可以正常使用程序</strong><ul>
 <li>只能使用刻录在计算机硬件上的bios程序</li>
@@ -1269,16 +1269,16 @@
 
       <ul class="sidebar-nav motion-element">
         <li class="sidebar-nav-toc">
-          المحتويات
+          文章目录
         </li>
         <li class="sidebar-nav-overview">
-          عام
+          站点概览
         </li>
       </ul>
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#操作系统"><span class="nav-number">1.</span> <span class="nav-text">操作系统</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#系统灵魂-核心专业课-底层开发基础"><span class="nav-number">1.0.0.0.0.1.</span> <span class="nav-text">**系统灵魂 核心专业课 底层开发基础**</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一-操作系统概述"><span class="nav-number">1.1.</span> <span class="nav-text">一 操作系统概述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一-初步认识"><span class="nav-number">1.1.1.</span> <span class="nav-text">(一). 初步认识:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二-操作系统功能和定义"><span class="nav-number">1.1.2.</span> <span class="nav-text">(二)操作系统功能和定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三-操作系统发展历史"><span class="nav-number">1.1.3.</span> <span class="nav-text">(三)操作系统发展历史</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四-分时技术-amp-分时操作系统"><span class="nav-number">1.1.4.</span> <span class="nav-text">(四)分时技术&amp;分时操作系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#五-典型操作系统类型"><span class="nav-number">1.1.5.</span> <span class="nav-text">(五)典型操作系统类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#章节测试"><span class="nav-number">1.1.6.</span> <span class="nav-text">章节测试</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#问答"><span class="nav-number">1.1.6.1.</span> <span class="nav-text">问答</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#开放性思考"><span class="nav-number">1.1.6.2.</span> <span class="nav-text">开放性思考</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二-操作系统逻辑结构"><span class="nav-number">1.2.</span> <span class="nav-text">二 操作系统逻辑结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一-操作系统逻辑结构"><span class="nav-number">1.2.1.</span> <span class="nav-text">(一)操作系统逻辑结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二-CPU的态"><span class="nav-number">1.2.2.</span> <span class="nav-text">(二)CPU的态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三-中断机制"><span class="nav-number">1.2.3.</span> <span class="nav-text">(三)中断机制</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二章章末"><span class="nav-number">1.3.</span> <span class="nav-text">第二章章末</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三操作系统用户界面"><span class="nav-number">1.4.</span> <span class="nav-text">三操作系统用户界面</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一-操作系统启动过程"><span class="nav-number">1.4.1.</span> <span class="nav-text">(一)操作系统启动过程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-Bios和主引导记录MBR"><span class="nav-number">1.4.1.1.</span> <span class="nav-text">1. Bios和主引导记录MBR</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三-OS用户界面"><span class="nav-number">1.4.2.</span> <span class="nav-text">(三)OS用户界面</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-OS用户界面概念"><span class="nav-number">1.4.2.1.</span> <span class="nav-text">1.OS用户界面概念</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四-系统调用"><span class="nav-number">1.4.3.</span> <span class="nav-text">(四)系统调用</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第四章-进程与线程"><span class="nav-number">2.</span> <span class="nav-text">第四章-进程与线程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一-进程管理"><span class="nav-number">2.1.</span> <span class="nav-text">(一)进程管理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-进程概念"><span class="nav-number">2.1.1.</span> <span class="nav-text">1.进程概念</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-进程基本概念"><span class="nav-number">2.1.1.1.</span> <span class="nav-text">(1)进程基本概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-进程状态"><span class="nav-number">2.1.1.2.</span> <span class="nav-text">(2)进程状态</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-进程控制块PCB-lt-br-gt"><span class="nav-number">2.1.1.3.</span> <span class="nav-text">(3)进程控制块PCB&lt;&#x2F;br&gt;</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-进程控制"><span class="nav-number">2.1.2.</span> <span class="nav-text">2.进程控制</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-基本概念："><span class="nav-number">2.1.2.1.</span> <span class="nav-text">(1)基本概念：</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#错题集"><span class="nav-number">3.</span> <span class="nav-text">错题集</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#第一章"><span class="nav-number">3.1.</span> <span class="nav-text">**第一章**</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#操作系统"><span class="nav-number">1.</span> <span class="nav-text">操作系统</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#系统灵魂-核心专业课-底层开发基础"><span class="nav-number">1.0.0.0.0.1.</span> <span class="nav-text">系统灵魂 核心专业课 底层开发基础</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一-操作系统概述"><span class="nav-number">1.1.</span> <span class="nav-text">一 操作系统概述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一-初步认识"><span class="nav-number">1.1.1.</span> <span class="nav-text">(一). 初步认识:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二-操作系统功能和定义"><span class="nav-number">1.1.2.</span> <span class="nav-text">(二)操作系统功能和定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三-操作系统发展历史"><span class="nav-number">1.1.3.</span> <span class="nav-text">(三)操作系统发展历史</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四-分时技术-amp-分时操作系统"><span class="nav-number">1.1.4.</span> <span class="nav-text">(四)分时技术&amp;分时操作系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#五-典型操作系统类型"><span class="nav-number">1.1.5.</span> <span class="nav-text">(五)典型操作系统类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#章节测试"><span class="nav-number">1.1.6.</span> <span class="nav-text">章节测试</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#问答"><span class="nav-number">1.1.6.1.</span> <span class="nav-text">问答</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#开放性思考"><span class="nav-number">1.1.6.2.</span> <span class="nav-text">开放性思考</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二-操作系统逻辑结构"><span class="nav-number">1.2.</span> <span class="nav-text">二 操作系统逻辑结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一-操作系统逻辑结构"><span class="nav-number">1.2.1.</span> <span class="nav-text">(一)操作系统逻辑结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二-CPU的态"><span class="nav-number">1.2.2.</span> <span class="nav-text">(二)CPU的态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三-中断机制"><span class="nav-number">1.2.3.</span> <span class="nav-text">(三)中断机制</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二章章末"><span class="nav-number">1.3.</span> <span class="nav-text">第二章章末</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三操作系统用户界面"><span class="nav-number">1.4.</span> <span class="nav-text">三操作系统用户界面</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一-操作系统启动过程"><span class="nav-number">1.4.1.</span> <span class="nav-text">(一)操作系统启动过程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-Bios和主引导记录MBR"><span class="nav-number">1.4.1.1.</span> <span class="nav-text">1. Bios和主引导记录MBR</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三-OS用户界面"><span class="nav-number">1.4.2.</span> <span class="nav-text">(三)OS用户界面</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-OS用户界面概念"><span class="nav-number">1.4.2.1.</span> <span class="nav-text">1.OS用户界面概念</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四-系统调用"><span class="nav-number">1.4.3.</span> <span class="nav-text">(四)系统调用</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第四章-进程与线程"><span class="nav-number">2.</span> <span class="nav-text">第四章-进程与线程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一-进程管理"><span class="nav-number">2.1.</span> <span class="nav-text">(一)进程管理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-进程概念"><span class="nav-number">2.1.1.</span> <span class="nav-text">1.进程概念</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-进程基本概念"><span class="nav-number">2.1.1.1.</span> <span class="nav-text">(1)进程基本概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-进程状态"><span class="nav-number">2.1.1.2.</span> <span class="nav-text">(2)进程状态</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-进程控制块PCB-lt-br-gt"><span class="nav-number">2.1.1.3.</span> <span class="nav-text">(3)进程控制块PCB&lt;&#x2F;br&gt;</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-进程控制"><span class="nav-number">2.1.2.</span> <span class="nav-text">2.进程控制</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-基本概念："><span class="nav-number">2.1.2.1.</span> <span class="nav-text">(1)基本概念：</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#错题集"><span class="nav-number">3.</span> <span class="nav-text">错题集</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#第一章"><span class="nav-number">3.1.</span> <span class="nav-text">**第一章**</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -1293,7 +1293,7 @@
           <a href="/archives/">
         
           <span class="site-state-item-count">3</span>
-          <span class="site-state-item-name">المقالات</span>
+          <span class="site-state-item-name">日志</span>
         </a>
       </div>
   </nav>
@@ -1324,10 +1324,10 @@
   </span>
   <span class="author" itemprop="copyrightHolder">Eric G. Perry</span>
 </div>
-  <div class="powered-by">تطبيق الموقع <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.2.0
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.2.0
   </div>
   <span class="post-meta-divider">|</span>
-  <div class="theme-info">الثمة – <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.7.2
+  <div class="theme-info">主题 – <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.7.2
   </div>
 
         
