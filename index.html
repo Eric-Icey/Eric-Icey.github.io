@@ -170,6 +170,13 @@
 
               <time title="创建时间：2020-03-15 21:12:40" itemprop="dateCreated datePublished" datetime="2020-03-15T21:12:40+08:00">2020-03-15</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-03-17 10:07:17" itemprop="dateModified" datetime="2020-03-17T10:07:17+08:00">2020-03-17</time>
+              </span>
 
           
 
@@ -182,7 +189,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          
+          <h1 id="SQL"><a href="#SQL" class="headerlink" title=" SQL "></a><center> SQL </center></h1><h2 id=""><a href="#" class="headerlink" title=" "></a> </h2>
       
     </div>
 
@@ -232,7 +239,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-03-16 17:23:00" itemprop="dateModified" datetime="2020-03-16T17:23:00+08:00">2020-03-16</time>
+                <time title="修改时间：2020-03-21 22:10:31" itemprop="dateModified" datetime="2020-03-21T22:10:31+08:00">2020-03-21</time>
               </span>
 
           
@@ -246,7 +253,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="计算机组成原理"><a href="#计算机组成原理" class="headerlink" title="计算机组成原理"></a><center>计算机组成原理</center></h1><h1 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a><center>第二章</center></h1><h2 id="一-数据与文字的表示方法"><a href="#一-数据与文字的表示方法" class="headerlink" title="一 数据与文字的表示方法"></a>一 数据与文字的表示方法</h2><h3 id="一-数据格式"><a href="#一-数据格式" class="headerlink" title="(一)数据格式"></a>(一)数据格式</h3><h4 id="1-定点数"><a href="#1-定点数" class="headerlink" title="1.定点数"></a>1.定点数</h4><p>定义：数据小数点位置固定不变<br>以n+1位字来存储数据<br><strong>纯小数</strong>小数点位于x<sub>n</sub>之后<br><strong>纯整数</strong>小数点位于x<sub>0</sub>的后面</p>
+          <h1 id="计算机组成原理"><a href="#计算机组成原理" class="headerlink" title="计算机组成原理"></a><center>计算机组成原理</center></h1><h1 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a><center>第二章</center></h1><h2 id="一-数据与文字的表示方法"><a href="#一-数据与文字的表示方法" class="headerlink" title="一 数据与文字的表示方法"></a>一 数据与文字的表示方法</h2><h3 id="一-数据格式"><a href="#一-数据格式" class="headerlink" title="(一)数据格式"></a>(一)数据格式</h3><h4 id="1-定点数"><a href="#1-定点数" class="headerlink" title="1.定点数"></a>1.定点数</h4><p>定义：数据小数点位置固定不变<br>以n+1位字来存储数据<br><strong>纯小数</strong>小数点位于$$之后<br><strong>纯整数</strong>小数点位于$x_0$的后面</p>
 <h4 id="2-浮点数"><a href="#2-浮点数" class="headerlink" title="2.浮点数"></a>2.浮点数</h4><ul>
 <li><p>任意二进制数可以写成$N = 2^e.M$的形式：</p>
 <ol>
@@ -263,9 +270,9 @@ x = (-1)^S*(1.M)*2^{E-127}\qquad \because e = E - 127 \quad \therefore 1\leq E\l
 </ul>
 </li>
 </ul>
-<h3 id="二-数的机器码表示"><a href="#二-数的机器码表示" class="headerlink" title="(二)数的机器码表示"></a>(二)数的机器码表示</h3><h4 id="1-原码表示"><a href="#1-原码表示" class="headerlink" title="1.原码表示"></a>1.原码表示</h4><ul>
-<li>正数：[x]<sub>原</sub> = $0 x_{n-1} \cdots x_{0}$ </li>
-<li>负数：[x]<sub>原</sub> = $1 x_{n-1} \cdots x_0$</li>
+<h3 id="二-数的机器码表示"><a href="#二-数的机器码表示" class="headerlink" title="(二) 数的机器码表示"></a>(二) 数的机器码表示</h3><h4 id="1-原码表示"><a href="#1-原码表示" class="headerlink" title="1.原码表示"></a>1.原码表示</h4><ul>
+<li>正数：$[x]_原 = 0x_{n-1} \cdots x_{0}$ </li>
+<li>负数：$[x]_原 = 1x_{n-1} \cdots x_0$</li>
 </ul>
 <h4 id="2-补码表示"><a href="#2-补码表示" class="headerlink" title="2.补码表示"></a>2.补码表示</h4><ul>
 <li>正数：与原码相同</li>
@@ -273,20 +280,20 @@ x = (-1)^S*(1.M)*2^{E-127}\qquad \because e = E - 127 \quad \therefore 1\leq E\l
 </ul>
 <h4 id="3-移码表示"><a href="#3-移码表示" class="headerlink" title="3.移码表示"></a>3.移码表示</h4><p>移码通常用于表示浮点数的阶码，当阶码为k位数时：</p>
 <script type="math/tex; mode=display">
-[e]_移 = 2^k + e,2^k > e \geq -2^k \quad [e]_移 为机器数,e为真值</script><h2 id="二-定点加法减法"><a href="#二-定点加法减法" class="headerlink" title="二 定点加法减法"></a>二 定点加法减法</h2><h4 id="一-补码加法"><a href="#一-补码加法" class="headerlink" title="(一)补码加法"></a>(一)补码加法</h4><p>公式：$[x]_补 + [y]补 = [x+y]_补$</p>
-<h4 id="二-补码减法"><a href="#二-补码减法" class="headerlink" title="(二)补码减法"></a>(二)补码减法</h4><p>公式：$[x-y]_补 = [x]补 + [-y]_补$<br>——对[y]<sub>补</sub>包括符号位取反+1</p>
-<h4 id="三-溢出概念与检测方法"><a href="#三-溢出概念与检测方法" class="headerlink" title="(三)溢出概念与检测方法"></a>(三)溢出概念与检测方法</h4><ol>
+[e]_移 = 2^k + e,2^k > e \geq -2^k \quad [e]_移 为机器数,e为真值</script><h2 id="二-定点加法减法"><a href="#二-定点加法减法" class="headerlink" title="二 定点加法减法"></a>二 定点加法减法</h2><h3 id="一-补码加法"><a href="#一-补码加法" class="headerlink" title="(一)补码加法"></a>(一)补码加法</h3><p>公式：$[x]_补 + [y]补 = [x+y]_补$</p>
+<h3 id="二-补码减法"><a href="#二-补码减法" class="headerlink" title="(二)补码减法"></a>(二)补码减法</h3><p>公式：$[x-y]_补 = [x]补 + [-y]_补$<br>——对$[y]_补$包括符号位取反+1</p>
+<h3 id="三-溢出概念与检测方法"><a href="#三-溢出概念与检测方法" class="headerlink" title="(三)溢出概念与检测方法"></a>(三)溢出概念与检测方法</h3><ol>
 <li><p>双符号位法：原本的0/1变为00/11，当符号位出现01时表示正溢，10表示负溢  </p>
 </li>
-<li><p>单符号位法：对符号位进位和最高有效位进位做异或运算即: </p>
+<li><p>单符号位法：对符号位进位和最高有效位进位做异或运算即:</p>
 <script type="math/tex; mode=display">
 V = C_f \bigoplus C_0\qquad C_f为符号位进位</script></li>
 </ol>
-<h2 id="三-定点乘法运算"><a href="#三-定点乘法运算" class="headerlink" title="三 定点乘法运算"></a>三 定点乘法运算</h2><h4 id="一-原码并行乘法"><a href="#一-原码并行乘法" class="headerlink" title="(一)原码并行乘法"></a>(一)原码并行乘法</h4><h6 id="1-人工算法与机器算法的异同"><a href="#1-人工算法与机器算法的异同" class="headerlink" title="1. 人工算法与机器算法的异同"></a>1. 人工算法与机器算法的异同</h6><ol>
+<h2 id="三-定点乘法运算"><a href="#三-定点乘法运算" class="headerlink" title="三 定点乘法运算"></a>三 定点乘法运算</h2><h3 id="一-原码并行乘法"><a href="#一-原码并行乘法" class="headerlink" title="(一)原码并行乘法"></a>(一)原码并行乘法</h3><h4 id="1-人工算法与机器算法的异同"><a href="#1-人工算法与机器算法的异同" class="headerlink" title="1. 人工算法与机器算法的异同"></a>1. 人工算法与机器算法的异同</h4><ol>
 <li>运算法则：同号相乘为正，异号相乘为负。积的符号可用异或($\bigoplus$)得到</li>
 <li>同样的二进制乘法与十进制乘法相同</li>
 </ol>
-<h6 id="2-不带符号的阵列乘法器"><a href="#2-不带符号的阵列乘法器" class="headerlink" title="2.不带符号的阵列乘法器"></a>2.不带符号的阵列乘法器</h6>
+<h4 id="2-不带符号的阵列乘法器"><a href="#2-不带符号的阵列乘法器" class="headerlink" title="2.不带符号的阵列乘法器"></a>2.不带符号的阵列乘法器</h4>
       
     </div>
 
@@ -336,7 +343,7 @@ V = C_f \bigoplus C_0\qquad C_f为符号位进位</script></li>
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-03-16 17:17:22" itemprop="dateModified" datetime="2020-03-16T17:17:22+08:00">2020-03-16</time>
+                <time title="修改时间：2020-03-23 10:25:44" itemprop="dateModified" datetime="2020-03-23T10:25:44+08:00">2020-03-23</time>
               </span>
 
           
@@ -350,19 +357,18 @@ V = C_f \bigoplus C_0\qquad C_f为符号位进位</script></li>
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a><center>操作系统</center></h1><hr>
-<h6 id="系统灵魂-核心专业课-底层开发基础"><a href="#系统灵魂-核心专业课-底层开发基础" class="headerlink" title="系统灵魂 核心专业课 底层开发基础"></a><center><font color="#dd0000">系统灵魂 核心专业课 底层开发基础</font></center></h6><hr>
+          <h1 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a><center>操作系统</center></h1><p><strong><center><font color="#00ffd0">系统灵魂 核心专业课 底层开发基础</font></center></strong></p>
 <h2 id="一-操作系统概述"><a href="#一-操作系统概述" class="headerlink" title="一 操作系统概述"></a>一 操作系统概述</h2><h3 id="一-初步认识"><a href="#一-初步认识" class="headerlink" title="(一). 初步认识:"></a>(一). 初步认识:</h3><ol>
 <li><strong>没有操作系统依旧可以正常使用程序</strong><ul>
 <li>只能使用刻录在计算机硬件上的bios程序</li>
 <li>操作系统与普通软件有重大差别</li>
 <li>例如在蓝屏界面设置计算机基本信息时</li>
-<li>此类程序的编写与安装都需要特殊的方式   </li>
+<li>此类程序的编写与安装都需要特殊的方式</li>
 </ul>
 </li>
 <li>普通用户无法运行正常软件  </li>
 <li>操作系统提供的功能:<ol>
-<li>可视化操作界面；   </li>
+<li>可视化操作界面;</li>
 <li>控制普通程序运行；  </li>
 <li>控制多个程序并发运行，管理系统资源；  </li>
 <li>进行系统设置/配置，监控系统状态；  </li>
@@ -408,15 +414,15 @@ V = C_f \bigoplus C_0\qquad C_f为符号位进位</script></li>
 </ol>
 <h3 id="二-操作系统功能和定义"><a href="#二-操作系统功能和定义" class="headerlink" title="(二)操作系统功能和定义"></a>(二)操作系统功能和定义</h3><ul>
 <li>功能:  <ol>
-<li>/*进程管理（CPU管理）：<br> 多个程序运行时，Windows环境下有多个进程在并发运行-&gt;共享CPU    <ol>
+<li>*进程管理（CPU管理）：<br> 多个程序运行时，Windows环境下有多个进程在并发运行-&gt;共享CPU<ol>
 <li>进程控制：创建，暂停，唤醒，撤销；  </li>
 <li>进程调度：<font color="#dd0000">调度策略，优先级</font>   </li>
 <li>进程间通信；  </li>
 </ol>
 </li>
-<li>/*内存管理：<ol>
+<li>*内存管理：<ol>
 <li>内存分配：<ul>
-<li>内存小也可运行程序，但会较为卡顿，因为每次只能运行其所需要的一部分 </li>
+<li>内存小也可运行程序，但会较为卡顿，因为每次只能运行其所需要的一部分</li>
 </ul>
 </li>
 <li>内存共享；  </li>
@@ -444,26 +450,24 @@ V = C_f \bigoplus C_0\qquad C_f为符号位进位</script></li>
 </ul>
 </li>
 <li>目录操作；</li>
-<li>文件/目录的存取管理权限；</li>
-</ol>
-</li>
-</ol>
-<ul>
+<li>文件/目录的存取管理权限；<ul>
 <li><strong>软件需要满足进程管理/内存管理才能称之为操作系统</strong></li>
-<li>通用/实用的操作系统可能会有更多的功能：<ul>
-<li>分布式管理，图形资源处理等； </li>
 </ul>
 </li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>定义：<ul>
-<li>大型系统程序：<ol>
-<li>提供用户接口；</li>
-<li>为应用程序分配/调度软硬件资源，控制/协调应用程序的并发活动；存取和保护信息 </li>
 </ol>
 </li>
+</ol>
+<ul>
+<li>通用/实用的操作系统可能会有更多的功能：<ul>
+<li>分布式管理，图形资源处理等;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>定义：<ul>
+<li>大型系统程序：<pre><code>1. 提供用户接口；
+2. 为应用程序分配/调度软硬件资源，控制/协调应用程序的并发活动；存取和保护信息
+</code></pre></li>
 </ul>
 </li>
 <li>地位：<ul>
@@ -518,34 +522,32 @@ V = C_f \bigoplus C_0\qquad C_f为符号位进位</script></li>
 </ol>
 </li>
 <li>单道批处理-晶体管时代：  <ul>
-<li>工作特点：<ol>
-<li>批量：多个作业输入磁盘形成<strong>作业队列</strong>；</li>
-<li>自动：一次处理队列中每个作业：<ul>
-<li>装入-运行-输出(循环处理)</li>
-<li>程序的装入和撤出：自动完成，效率高  </li>
-</ul>
-</li>
-<li>单道：依次，串行；</li>
-</ol>
-</li>
+<li>工作特点：<pre><code>1. 批量：多个作业输入磁盘形成**作业队列**；
+2. 自动：一次处理队列中每个作业：
+    + 装入-运行-输出(循环处理)
+    + 程序的装入和撤出：自动完成，效率高  
+3. 单道：依次，串行；
+</code></pre><ul>
 <li>CPU利用情况：<ul>
 <li><strong>CPU和外设交替空闲和忙碌，CPU和外设利用效率都很低</strong></li>
 </ul>
 </li>
 </ul>
 </li>
+</ul>
+</li>
 <li>多道批处理：<ul>
 <li>定义：内存中存放多道程序，当一个程序不再使用CPU时，调用另一个程序来占用CPU相互穿插运行；</li>
-<li>特点：<ol>
-<li>多道：内存上同时存放多道程序；</li>
-<li>宏观上并行，微观上串行；</li>
-</ol>
-</li>
+<li>特点：<pre><code>1. 多道：内存上同时存放多道程序；
+2. 宏观上并行，微观上串行；
+</code></pre><ul>
 <li>缺点：<ol>
 <li>作业处理时间长；</li>
 <li>交互能力差；</li>
 <li>运行过程不确定：无法确定当前运行的具体程序；</li>
 </ol>
+</li>
+</ul>
 </li>
 </ul>
 </li>
@@ -596,12 +598,10 @@ V = C_f \bigoplus C_0\qquad C_f为符号位进位</script></li>
 <li>大型分时系统的实践：MUltics</li>
 <li>第一个实用化的分时操作系统:UNIX:<ul>
 <li>体现操作系统领域各种先进概念和技术</li>
-<li>革新和创造：<ol>
-<li>操作系统的可移植性；  </li>
-<li><em>硬件无关性；</em></li>
-<li>将外设当成特殊的文件类型进行处理，进行统一管理；</li>
-</ol>
-</li>
+<li>革新和创造：<pre><code>1. 操作系统的可移植性；  
+2. *硬件无关性；*
+3. 将外设当成特殊的文件类型进行处理，进行统一管理；
+</code></pre></li>
 <li><strong>现主要用于服务器而非个人用户</strong></li>
 </ul>
 </li>
@@ -856,10 +856,7 @@ V = C_f \bigoplus C_0\qquad C_f为符号位进位</script></li>
 </li>
 </ol>
 </li>
-<li>OS的微内核结构的优点，对设计程序有什么启示？  <ul>
-<li></li>
-</ul>
-</li>
+<li>OS的微内核结构的优点，对设计程序有什么启示？  </li>
 </ul>
 <h3 id="二-CPU的态"><a href="#二-CPU的态" class="headerlink" title="(二)CPU的态"></a>(二)CPU的态</h3><ul>
 <li>OS的最基本硬件：CPU<ul>
@@ -868,7 +865,7 @@ V = C_f \bigoplus C_0\qquad C_f为符号位进位</script></li>
 <li>CPU的工作状态</li>
 <li>对资源和指令使用权限的描述</li>
 <li>特权指令：和底层命令相关，CPU在高权限状态下才可使用<center>  
-![image.png](https://i.loli.net/2020/02/27/wH68ugK5M4DClEi.png)</center></li>
+ ![image.png](https://i.loli.net/2020/02/27/wH68ugK5M4DClEi.png)</center></li>
 </ol>
 </li>
 <li>态的分类：<ol>
@@ -902,8 +899,6 @@ V = C_f \bigoplus C_0\qquad C_f为符号位进位</script></li>
 </li>
 </ol>
 </li>
-</ul>
-</li>
 <li>硬件和OS对CPU的观察<ul>
 <li>硬件按照 态 区分CPU状态</li>
 <li>OS按照 进程  </li>
@@ -911,7 +906,7 @@ V = C_f \bigoplus C_0\qquad C_f为符号位进位</script></li>
 </ul>
 </li>
 <li>Intel CPU的态：<ul>
-<li></li>
+<li><font color = "#dd0000">待解答</font></li>
 </ul>
 </li>
 <li>存储器:存储程序和数据的部件<ul>
@@ -931,8 +926,6 @@ V = C_f \bigoplus C_0\qquad C_f为符号位进位</script></li>
 <li>辅存：相反</li>
 </ul>
 </li>
-</ul>
-</li>
 <li>存储体系<ul>
 <li>理想：速度快，容量大，成本低</li>
 <li>实际：<ul>
@@ -948,6 +941,10 @@ V = C_f \bigoplus C_0\qquad C_f为符号位进位</script></li>
 <li>内存(没有命中)</li>
 <li>辅存(<strong>缺页</strong>)  </li>
 </ol>
+</li>
+</ul>
+</li>
+</ul>
 </li>
 </ul>
 </li>
@@ -1003,19 +1000,25 @@ V = C_f \bigoplus C_0\qquad C_f为符号位进位</script></li>
 <li>回复：退出~后，出栈恢复</li>
 </ul>
 </li>
-<li>中断响应过程<pre><code>  1. 识别中断源
-  2. 保护断点和现场
-  3. 装入中断服务程序的入口地址(CS:IP)
-  4. 进入中断服务程序
-  5. 恢复现场和断点
-  6. 中断返回IRET
-</code></pre></li>
-<li>~实质：<pre><code>  + 交换指令执行地址
-  + 交换CPU的态
-  + 工作：
-          + 现场的保护和恢复
-          + 参数传递(通信)  
-</code></pre></li>
+<li>中断响应过程<ol>
+<li>识别中断源</li>
+<li>保护断点和现场</li>
+<li>装入中断服务程序的入口地址(CS:IP)</li>
+<li>进入中断服务程序</li>
+<li>恢复现场和断点</li>
+<li>中断返回IRET</li>
+</ol>
+</li>
+<li>~实质：<ul>
+<li>交换指令执行地址</li>
+<li>交换CPU的态</li>
+<li>工作：<ul>
+<li>现场的保护和恢复</li>
+<li>参数传递(通信)  </li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -1038,8 +1041,7 @@ V = C_f \bigoplus C_0\qquad C_f为符号位进位</script></li>
 </ol>
 </li>
 </ol>
-<h2 id="三操作系统用户界面"><a href="#三操作系统用户界面" class="headerlink" title="三操作系统用户界面"></a>三操作系统用户界面</h2><hr>
-<h3 id="一-操作系统启动过程"><a href="#一-操作系统启动过程" class="headerlink" title="(一)操作系统启动过程"></a>(一)操作系统启动过程</h3><h4 id="1-Bios和主引导记录MBR"><a href="#1-Bios和主引导记录MBR" class="headerlink" title="1. Bios和主引导记录MBR"></a>1. Bios和主引导记录MBR</h4><ol>
+<h2 id="三-操作系统用户界面"><a href="#三-操作系统用户界面" class="headerlink" title="三 操作系统用户界面"></a>三 操作系统用户界面</h2><h3 id="一-操作系统启动过程"><a href="#一-操作系统启动过程" class="headerlink" title="(一)操作系统启动过程"></a>(一)操作系统启动过程</h3><h4 id="1-Bios和主引导记录MBR"><a href="#1-Bios和主引导记录MBR" class="headerlink" title="1. Bios和主引导记录MBR"></a>1. Bios和主引导记录MBR</h4><ol>
 <li>实模式和保护模式<ul>
 <li>实模式：<ul>
 <li>程序按照8086寻址访问</li>
@@ -1047,10 +1049,8 @@ V = C_f \bigoplus C_0\qquad C_f为符号位进位</script></li>
 <li>实模式存取的1M空间<ul>
 <li>前面640K：基本内存</li>
 <li>中间128K:显卡</li>
-<li>最后256：BIOS(Basic IO System，<em>固件</em>:硬件方式存在的软件)<ul>
-<li><strong>系统BIOS</strong>(<em>最后64K</em>)</li>
-</ul>
-</li>
+<li>最后256：BIOS(Basic IO System，<em>固件</em>:硬件方式存在的软件)<pre><code>- **系统BIOS**(*最后64K*)
+</code></pre></li>
 </ul>
 </li>
 </ul>
@@ -1059,7 +1059,7 @@ V = C_f \bigoplus C_0\qquad C_f为符号位进位</script></li>
 <li>寻址方式</li>
 <li>段页式寻址机制-<strong>第七章</strong></li>
 <li>虚拟地址，进程，封闭空间</li>
-<li>程序和OS运行环境都被保护 </li>
+<li>程序和OS运行环境都被保护</li>
 </ul>
 </li>
 </ul>
@@ -1069,12 +1069,10 @@ V = C_f \bigoplus C_0\qquad C_f为符号位进位</script></li>
 <li>基本的设备IO服务：<pre><code>  + 使用中断的方式来进行调用，每一个IO调用都有对应的中断序列号
   + 每一个中断序列号下又有更多的子功能序列
 </code></pre></li>
-<li>加电自检和自举                <ul>
-<li>自检POST <ul>
-<li>初始化基本硬件：CPU，GPU，内存。。。</li>
-<li>自检过程异常时，主板会发出警告声</li>
-</ul>
-<ul>
+<li>加电自检和自举<ul>
+<li>自检POST<ul>
+<li>初始化基本硬件：CPU，GPU，内存······</li>
+<li>自检过程异常时，主板会发出警告声<ul>
 <li>PowerOn&amp; Reset键的指令<ul>
 <li>执行FFFF0：跳转到加电自检</li>
 </ul>
@@ -1082,7 +1080,9 @@ V = C_f \bigoplus C_0\qquad C_f为符号位进位</script></li>
 <li>查找显卡BIOS，调用</li>
 <li>依次查找，调用其他设备的BIOS</li>
 <li>显示启动画面</li>
-<li>从对应存储设备读入OS                                </li>
+<li>从对应存储设备读入OS</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -1105,7 +1105,7 @@ V = C_f \bigoplus C_0\qquad C_f为符号位进位</script></li>
 <li>BIOS和MBR程序运行过程<ol>
 <li>POST -&gt;CMOS设置(硬盘启动)-&gt;读取MBR-&gt;控制权给MBR</li>
 <li>MBR加载第一分区PBR并加载</li>
-<li>PBR继续控制后续过程    </li>
+<li>PBR继续控制后续过程</li>
 </ol>
 </li>
 </ol>
@@ -1153,7 +1153,6 @@ V = C_f \bigoplus C_0\qquad C_f为符号位进位</script></li>
 </ul>
 </li>
 </ol>
-<hr>
 <h1 id="第四章-进程与线程"><a href="#第四章-进程与线程" class="headerlink" title="第四章-进程与线程"></a>第四章-进程与线程</h1><h2 id="一-进程管理"><a href="#一-进程管理" class="headerlink" title="(一)进程管理"></a>(一)进程管理</h2><h3 id="1-进程概念"><a href="#1-进程概念" class="headerlink" title="1.进程概念"></a>1.进程概念</h3><h4 id="1-进程基本概念"><a href="#1-进程基本概念" class="headerlink" title="(1)进程基本概念"></a>(1)进程基本概念</h4><ul>
 <li>并发环境运行的问题<ul>
 <li>运行过程不确定</li>
@@ -1185,9 +1184,9 @@ V = C_f \bigoplus C_0\qquad C_f为符号位进位</script></li>
 </li>
 <li>暂存与长存：<ul>
 <li>进程在内存驻留，程序保存在物理介质</li>
+<li>一个程序可能有多个进程</li>
 </ul>
 </li>
-<li>一个程序可能有多个进程 </li>
 </ul>
 </li>
 <li><strong>进程的类型</strong><ul>
@@ -1256,7 +1255,7 @@ V = C_f \bigoplus C_0\qquad C_f为符号位进位</script></li>
 </ol>
 </li>
 </ol>
-<h3 id="2-进程控制"><a href="#2-进程控制" class="headerlink" title="2.进程控制"></a>2.进程控制</h3><h4 id="1-基本概念："><a href="#1-基本概念：" class="headerlink" title="(1)基本概念："></a>(1)基本概念：</h4><ol>
+<h2 id="2-进程控制"><a href="#2-进程控制" class="headerlink" title="2.进程控制"></a>2.进程控制</h2><h3 id="1-基本概念"><a href="#1-基本概念" class="headerlink" title="(1)基本概念"></a>(1)基本概念</h3><ol>
 <li>概念：<ul>
 <li>进程生存全期间，对其全部行为的控制</li>
 <li>四个典型的控制行为：<ol>
@@ -1339,6 +1338,61 @@ V = C_f \bigoplus C_0\qquad C_f为符号位进位</script></li>
 </ul>
 </li>
 </ul>
+</li>
+</ol>
+<h2 id="三-线程-Thread"><a href="#三-线程-Thread" class="headerlink" title="三 线程(Thread)"></a>三 线程(Thread)</h2><h3 id="一-基本概念"><a href="#一-基本概念" class="headerlink" title="(一)基本概念"></a>(一)基本概念</h3><ol>
+<li>CPU直接运行的实体</li>
+<li>执行线程时，进程就不再是CPU的基本调度资源</li>
+<li>一个进程可以创建多个线程且共享CPU进而实现并发</li>
+</ol>
+<h3 id="二-执行"><a href="#二-执行" class="headerlink" title="(二)执行"></a>(二)执行</h3><ul>
+<li>使用函数CreateThread()<ul>
+<li>功能：将函数做为线程来创建</li>
+<li>将需要执行的函数作为CreateThread的参数</li>
+</ul>
+</li>
+<li>单线程程序：程序缺省只有一个线程(Main)，函数串行执行</li>
+<li>多线程程序：至少两个线程在程序中 其中一个必然为主线程</li>
+</ul>
+<h3 id="三-线程典型使用场景"><a href="#三-线程典型使用场景" class="headerlink" title="(三)线程典型使用场景"></a>(三)线程典型使用场景</h3><ol>
+<li>程序的多个功能需要并发运行  <ul>
+<li>e.g：看电影</li>
+<li>视频解码，音频解码，网络接收</li>
+</ul>
+</li>
+<li>改善窗口交互<ul>
+<li>需要进行后台计算</li>
+<li>文件的复制</li>
+</ul>
+</li>
+<li>多核CPU</li>
+<li>协作完成同一件事情，需要共享的文件比较多</li>
+</ol>
+<h3 id="四-使用线程的麻烦"><a href="#四-使用线程的麻烦" class="headerlink" title="(四)使用线程的麻烦"></a>(四)使用线程的麻烦</h3><ol>
+<li>程序难以调试</li>
+<li>线程是否安全</li>
+<li>并发的过程难以控制</li>
+</ol>
+<h2 id="四-临界区和锁"><a href="#四-临界区和锁" class="headerlink" title="四 临界区和锁"></a>四 临界区和锁</h2><h3 id="一-临界资源-amp-临界区"><a href="#一-临界资源-amp-临界区" class="headerlink" title="(一) 临界资源&amp;临界区"></a>(一) 临界资源&amp;临界区</h3><ol>
+<li>临界区：区域内的操作只能够串行的运行，不能并发</li>
+<li>临界资源：一次只允许一个进程独占访问的资源：比如<u>共享变量?</u></li>
+<li>同样的，临界区就是访问临界资源的代码块</li>
+<li>访问特点：<ul>
+<li>具有排他性</li>
+<li></li>
+</ul>
+</li>
+<li>访问机制的四个原则：<ol>
+<li>临界区忙时，其他进程需要在临界区外等候</li>
+<li>临界区空闲时，任何有权进程均可进入</li>
+<li>进程的等待时间是由限制的<ul>
+<li>临界区设置多大比较好？</li>
+<li><font color="#dd0000">待解答</font>
+
+</li>
+</ul>
+</li>
+</ol>
 </li>
 </ol>
 <h1 id="错题集"><a href="#错题集" class="headerlink" title="错题集"></a><center><font color="#dd0000">错题集</font></center></h1><h2 id="第一章"><a href="#第一章" class="headerlink" title="**第一章**"></a><center>**第一章**</center></h2><ol>
